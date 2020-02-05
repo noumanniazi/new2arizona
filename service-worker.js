@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/new2arizona/precache-manifest.0553432a50216e2f0ecd561057e35b6f.js"
+  "/new2arizona/precache-manifest.e8afb65b644b387972f83cc678c414cf.js"
 );
 
 self.addEventListener('message', (event) => {
