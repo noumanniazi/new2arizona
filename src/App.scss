@@ -1,0 +1,21 @@
+.website-width {
+  max-width: 80%;
+  margin: auto;
+  @media (max-width: 1920px) {
+    max-width: 1440px;
+  }
+  @media (max-width: 1440px) {
+    max-width: 1110px;
+  }
+  @media (max-width: 1280px) {
+    max-width: 85%;
+  }
+
+  @media (max-width: 480px) {
+    max-width: calc(100% - 20px);
+  }
+  .personal-info-link {
+    text-decoration: none;
+    color: #9781a0;
+  }
+}

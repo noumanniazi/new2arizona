@@ -1,0 +1,28 @@
+.visual-and-text {
+  padding-top: 130px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
+  @media (max-width: 768px) {
+    padding-top: 60px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+    p {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+  @media (max-width: 480px) {
+    padding-top: 40px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 400px 1fr;
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}

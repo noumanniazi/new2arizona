@@ -1,0 +1,39 @@
+.App-header {
+  height: 68px;
+  background: linear-gradient(270deg, #f47826 0%, rgba(147, 100, 114, 0.82675) 50.69%, rgba(121, 94, 135, 0.78) 100%);
+  display: flex;
+  align-items: center;
+}
+.wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  .social-icon-text {
+    > a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 18px;
+      color: #ffffff;
+      > span {
+        padding-left: 12px;
+      }
+    }
+  }
+}
+.website-logo-wrap{
+  display: flex;
+  margin: auto;
+  .logo {
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 35px;
+    color: #9781a1;
+  
+    padding-top: 37px;
+    padding-bottom: 31px;
+  }
+}
