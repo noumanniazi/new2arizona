@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/new2arizona/static/css/main.e978b462.chunk.css",
+    "main.js": "/new2arizona/static/js/main.3eaf72bf.chunk.js",
+    "main.js.map": "/new2arizona/static/js/main.3eaf72bf.chunk.js.map",
+    "runtime-main.js": "/new2arizona/static/js/runtime-main.22f7c1f7.js",
+    "runtime-main.js.map": "/new2arizona/static/js/runtime-main.22f7c1f7.js.map",
+    "static/js/2.dd227c83.chunk.js": "/new2arizona/static/js/2.dd227c83.chunk.js",
+    "static/js/2.dd227c83.chunk.js.map": "/new2arizona/static/js/2.dd227c83.chunk.js.map",
+    "index.html": "/new2arizona/index.html",
+    "precache-manifest.0553432a50216e2f0ecd561057e35b6f.js": "/new2arizona/precache-manifest.0553432a50216e2f0ecd561057e35b6f.js",
+    "service-worker.js": "/new2arizona/service-worker.js",
+    "static/css/main.e978b462.chunk.css.map": "/new2arizona/static/css/main.e978b462.chunk.css.map",
+    "static/js/2.dd227c83.chunk.js.LICENSE.txt": "/new2arizona/static/js/2.dd227c83.chunk.js.LICENSE.txt",
+    "static/media/arizona.jpg": "/new2arizona/static/media/arizona.2dee52b7.jpg",
+    "static/media/family.png": "/new2arizona/static/media/family.65915c00.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.22f7c1f7.js",
+    "static/js/2.dd227c83.chunk.js",
+    "static/css/main.e978b462.chunk.css",
+    "static/js/main.3eaf72bf.chunk.js"
+  ]
+}
