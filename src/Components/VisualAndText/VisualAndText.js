@@ -11,7 +11,7 @@ const VisualAndText = (props) => {
         <>
           <div>
             <h2>{text.heading}</h2>
-            {text.paragraphs.map(item => <><p>{item}</p></>)}
+            {text.paragraphs.map((item, index) => <p key={`section1-para-${index}`}>{item}</p>)}
           </div>
           {hasImage ? <img className="family-img"  src={src} alt=""/> : <Video url={src} />}
         </>
@@ -20,7 +20,7 @@ const VisualAndText = (props) => {
             {hasImage ? <img className="family-img" src={src} alt="" /> : <Video url={src} />}
             <div>
               <h2>{text.heading}</h2>
-              {text.paragraphs.map(item => <><p>{item}</p></>)}
+              {text.paragraphs.map((item, index) => <p key={`section1-para-${index}`}>{item}</p>)}
             </div>
           </>
         )}
