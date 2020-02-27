@@ -9,6 +9,7 @@ import Section3 from './Components/Section3';
 import Footer from './Components/Footer';
 import data from './data';
 import family from './Assets/Images/family.png';
+import arizona from './Assets/Images/arizona.jpg';
 
 import './App.scss';
 
@@ -17,9 +18,9 @@ function App() {
     <div className="App">
       <Header />
       <Intro />
-      <VisualAndText src="https://www.youtube.com/embed/4zqF4YENmFs" text={data.section1} hasImage={false} />
+      <VisualAndText src={arizona} text={data.section1} hasImage bullets/>
       <Section2 data={data} img={family} />
-      <Form />
+      {/* <Form /> */}
       <Section3 data={data} />
       <Footer />
     </div>

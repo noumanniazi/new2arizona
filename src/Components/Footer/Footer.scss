@@ -1,6 +1,8 @@
+@import '../../Assets/scss/common.scss';
+
 .footer {
   background: #9781a0;
-  margin-top: 200px;
+  margin-top: $section-padding;
   .footer-content {
     margin: auto;
     .footer-grid {
@@ -15,14 +17,26 @@
           > span {
               padding-right: 10px;
           }
-          > a {
+          > a, p {
               text-decoration: none;
               color: #ffffff;
+              @media (max-width: 768px) {
+                font-size: 14px;
+              }
+              @media (max-width: 480px) {
+                font-size: 12px;
+              }
           }
       }
       @media(max-width: 480px) {
         grid-template-columns: 1fr;
       }
     }
+  }
+  @media(max-width: 768px){
+    margin-top: $section-padding-768;
+  }
+  @media(max-width: 480px){
+    margin-top: $section-padding-480;
   }
 }

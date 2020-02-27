@@ -6,7 +6,7 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <div className="footer">
+        <footer className="footer">
         <div className="website-width footer-content">
             <div className="footer-grid">
                 <div className="footer-item">
@@ -26,7 +26,7 @@ const Footer = () => {
                 </div>
             </div>
         </div>
-        </div>
+        </footer>
     );
 }
 

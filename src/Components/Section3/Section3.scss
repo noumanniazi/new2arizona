@@ -1,32 +1,30 @@
+@import "../../Assets/scss/common.scss";
+
 .leaving-cal-section {
-    margin: auto;
-    min-height: 600px;
-    .leaving-cal-text{
-      padding-top: 80px;
-    }
-    .video{
-      padding-bottom: 56.25%;
-    }
-    @media (max-width: 768px) {
-        padding-top: 60px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 400px 1fr;
-        p {
-          font-size: 14px;
-          font-weight: normal;
-        }
-      }
-      @media (max-width: 480px) {
-        padding-top: 40px;
-        grid-template-columns: 1fr;
-        grid-template-rows: 400px 1fr;
-        h2 {
-          margin-top: 0;
-        }
-        p {
-          font-size: 12px;
-          font-weight: normal;
-        }
-      }
+  padding-top: $section-padding;
+  margin: auto;
+  min-height: 600px;
+  .video {
+    padding-bottom: 56.25%;
   }
-  
+  @media (max-width: 768px) {
+    padding-top: $section-padding-768;
+    grid-template-columns: 1fr;
+    min-height: unset;
+    h2 {
+      font-size: 18px;
+    }
+    p {
+      font-size: 14px;
+      font-weight: normal;
+    }
+  }
+  @media (max-width: 480px) {
+    padding-top: $section-padding-480;
+    grid-template-columns: 1fr;
+    p {
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}

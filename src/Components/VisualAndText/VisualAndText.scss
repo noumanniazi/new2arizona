@@ -1,26 +1,35 @@
+@import '../../Assets/scss/common.scss';
+
 .visual-and-text {
-  padding-top: 130px;
+  padding-top: $section-padding;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-gap: 40px;
+  align-items: center;
+  grid-gap: $grid-gap;
+  .section-img {
+    width: 100%;
+  }
+  .section-paragraph {
+    margin: 0;
+  }
   @media (max-width: 768px) {
-    padding-top: 60px;
+    padding-top: $section-padding-768;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 1fr;
-    p {
+    grid-gap: $grid-gap-768;
+    p, li {
       font-size: 14px;
       font-weight: normal;
     }
   }
   @media (max-width: 480px) {
-    padding-top: 40px;
+    padding-top: $section-padding-480;
     grid-template-columns: 1fr;
-    grid-template-rows: 400px 1fr;
+    grid-gap: $grid-gap-480;
     h2 {
       margin-top: 0;
     }
-    p {
+    p, li {
       font-size: 12px;
       font-weight: normal;
     }
