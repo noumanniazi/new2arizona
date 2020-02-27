@@ -1,6 +1,6 @@
 import React from 'react';
 
-import SVGIcons from '../SVGIcons/SVGIcons';
+import SVGIcons from '../../Assets/SVGIcons/SVGIcons';
 
 import './Footer.scss';
 

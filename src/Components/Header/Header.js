@@ -2,7 +2,7 @@ import React from 'react';
 
 import EXPRealtyImg from '../../Assets/Images/eXpRealty-colored(RGB).png';
 import equalOpportunityImg from '../../Assets/Images/equal-high-res.png';
-import SVGIcons from '../SVGIcons/SVGIcons';
+import SVGIcons from '../../Assets/SVGIcons/SVGIcons';
 import './Header.scss';
 
 const Header = () => {
