@@ -1,18 +1,21 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Home from './Containers/Home';
-
-import './App.scss';
+import Home from "./Containers/Home";
+import LeavingCalifornia from "./Containers/LeavingCalifornia";
+import GoldenState from "./Containers/GoldenState";
+import "./App.scss";
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route exact path="/LeavingCalifornia">
+          <LeavingCalifornia />
+        </Route>
+        <Route exact path="/GoldenState">
+          <GoldenState />
+        </Route>
         <Route path="/">
           <Home />
         </Route>

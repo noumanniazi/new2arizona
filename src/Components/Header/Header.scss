@@ -3,10 +3,10 @@
   background: linear-gradient(270deg, #f47826 0%, rgba(147, 100, 114, 0.82675) 50.69%, rgba(121, 94, 135, 0.78) 100%);
   display: flex;
   align-items: center;
-  @media(max-width: 768px) {
+  @media (max-width: 768px) {
     height: 44px;
   }
-  @media(max-width: 480px) {
+  @media (max-width: 480px) {
     height: 36px;
   }
 }
@@ -35,7 +35,7 @@
         }
       }
       padding-right: 20px;
-      @media(max-width: 768px){
+      @media (max-width: 768px) {
         > a {
           font-size: 12px;
           svg {
@@ -47,7 +47,7 @@
           }
         }
       }
-      @media(max-width: 480px){
+      @media (max-width: 480px) {
         > a {
           font-size: 10px;
           svg {
@@ -61,35 +61,35 @@
       }
     }
   }
-  .legal-images{
+  .legal-images {
     display: flex;
-    .exp-img{
+    .exp-img {
       padding-right: 20px;
-      height: 30px;
-      width: 79px;
+      height: 22px;
+      width: 64px;
     }
-    .equal-img{
-      height: 30px;
-      width: 31px;
+    .equal-img {
+      height: 23px;
+      width: 23px;
     }
-    @media(max-width: 768px){
-      .exp-img{
+    @media (max-width: 768px) {
+      .exp-img {
         padding-right: 10px;
         height: 30px;
         width: 79px;
       }
-      .equal-img{
+      .equal-img {
         height: 30px;
         width: 31px;
       }
     }
-    @media(max-width: 480px){
-      .exp-img{
+    @media (max-width: 480px) {
+      .exp-img {
         padding-right: 10px;
         height: 25px;
         width: 66px;
       }
-      .equal-img{
+      .equal-img {
         height: 25px;
         width: 26px;
       }
@@ -100,16 +100,20 @@
   display: flex;
   margin: auto;
   .logo {
-    font-weight: bold;
-    font-size: 22px;
-    color: #9781a1;
     padding-top: 24px;
     padding-bottom: 24px;
-    @media(max-width: 480px){
-      font-size: 18px;
+    > a {
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 22px;
       color: #9781a1;
+    }
+    @media (max-width: 480px) {
       padding-top: 12px;
       padding-bottom: 12px;
+      > a {
+        font-size: 18px;
+      }
     }
   }
 }

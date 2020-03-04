@@ -25,23 +25,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
+    .form-holder {
+      margin: auto;
+      max-width: 400px;
+      padding: 20px 50px;
+      background-color: #9781a0;
+      > p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 22px;
+        line-height: 53px;
+        text-align: center;
+        margin: 0;
+      }
+    }
     .form {
       display: flex;
       flex-direction: column;
       margin: auto;
-      max-width: 600px;
+      max-width: 400px;
       padding: 20px 50px;
       background-color: #ffffff;
       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
       .form-title {
         color: #9781a1;
-        font-size: 26px;
+        font-size: 18px;
         text-align: center;
       }
       input[type="text"],
       input[type="email"] {
         color: #8e8989;
-        font-size: 16px;
+        font-size: 14px;
         padding: 16px 20px;
         margin: 10px 0;
         display: inline-block;
@@ -54,17 +68,21 @@
         &::placeholder {
           color: #8e8989;
         }
+
+        @media (max-width: 480px) {
+          font-size: 11px;
+        }
       }
       .have-home-wrap {
         .have-home-title {
           padding-left: 10px;
-          font-size: 16px;
+          font-size: 14px;
           color: #8e8989;
         }
         .radio-buttons-inline {
           display: flex;
           .radio-text {
-            font-size: 16px;
+            font-size: 14px;
             color: #8e8989;
           }
           .radio-button-wrap {
@@ -83,13 +101,14 @@
       .when-to-move-wrap {
         .when-to-move-title {
           padding-left: 10px;
-          font-size: 16px;
+          font-size: 14px;
           color: #8e8989;
+          margin-top: 2rem;
         }
         .radio-buttons-inline {
           display: flex;
           .radio-text {
-            font-size: 16px;
+            font-size: 14px;
             color: #8e8989;
           }
           .radio-button-wrap {
@@ -111,18 +130,25 @@
         display: flex;
         justify-content: center;
         .form-submit-btn {
+          display: flex;
           background: #9781a1;
+          text-transform: uppercase;
           border-radius: 5px;
           border: none;
           color: white;
-          padding: 12px 32px;
+          padding: 12px 40px;
           text-align: center;
           text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
+          font-size: 14px;
           margin: 4px 2px;
           cursor: pointer;
           &:hover {
+            background: rgb(137, 115, 147);
+          }
+          > div {
+            margin-left: 10px;
+          }
+          &.submitting{
             background: rgb(137, 115, 147);
           }
         }

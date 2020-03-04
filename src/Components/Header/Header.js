@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import EXPRealtyImg from '../../Assets/Images/eXpRealty-colored(RGB).png';
 import equalOpportunityImg from '../../Assets/Images/equal-high-res.png';
@@ -22,13 +23,13 @@ const Header = () => {
             </div>
           </div>
           <div className="legal-images">
-            <img className="exp-img" src={EXPRealtyImg} />
-            <img className="equal-img" src={equalOpportunityImg} />
+            <img className="exp-img" src={EXPRealtyImg} alt="EXP Realty"/>
+            <img className="equal-img" src={equalOpportunityImg} alt="Equal Opportunity Housing"/>
           </div>
         </div>
       </header>
       <div className="website-width website-logo-wrap">
-        <span className="logo">NEW2ARIZONA</span>
+        <span className="logo"><Link to="/">NEW2ARIZONA</Link></span>
       </div>
     </>
   );

@@ -1,23 +1,36 @@
-@import '../../Assets/scss/common.scss';
+@import "../../Assets/scss/common.scss";
 
 .visual-and-text {
   padding-top: $section-padding;
   margin: auto;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto 1fr;
   align-items: center;
   grid-gap: $grid-gap;
-  .section-img {
-    width: 100%;
+  font-size: 14px;
+  color: #777474;
+
+  ul {
+    padding: 0;
   }
+
+  .section-img {
+    
+    @media (max-width: 768px) {
+    justify-self: center;
+  }
+}
   .section-paragraph {
     margin: 0;
+    list-style: none;
   }
+
   @media (max-width: 768px) {
     padding-top: $section-padding-768;
     grid-template-columns: 1fr;
     grid-gap: $grid-gap-768;
-    p, li {
+    p,
+    li {
       font-size: 14px;
       font-weight: normal;
     }
@@ -29,7 +42,8 @@
     h2 {
       margin-top: 0;
     }
-    p, li {
+    p,
+    li {
       font-size: 12px;
       font-weight: normal;
     }
