@@ -7,9 +7,6 @@ import Footer from "../../Components/Footer";
 import data from "../../data";
 
 const LeavingCalifornia = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [])
   return (
     <div className="App">
       <Header />

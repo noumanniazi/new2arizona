@@ -7,7 +7,7 @@ const Section3 = (props) => {
     const { data } = props;
     return (
         <div className="website-width leaving-cal-section">
-            <Video url="https://www.youtube.com/embed/eJcT3JbrDRw"/>
+            <Video url="https://www.youtube.com/embed/4zqF4YENmFs"/>
             <div className="leaving-cal-text">
                 <h2>{data.section3.heading}</h2>
                 <p>{data.section3.paragraphs[0]}</p>

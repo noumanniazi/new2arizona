@@ -10,10 +10,10 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route exact path="/LeavingCalifornia">
+        <Route exact path="/TaxExodus">
           <LeavingCalifornia />
         </Route>
-        <Route exact path="/GoldenState">
+        <Route exact path="/LeavingCalifornia">
           <GoldenState />
         </Route>
         <Route path="/">

@@ -28,8 +28,8 @@ const Home = () => {
       </div>
       <Form />
       <section className="button-links website-width">
-        <Link to="/LeavingCalifornia">The Great Tax Exodus <SVGIcons name='Chevron' /></Link>
-        <Link to="/GoldenState">Leaving the Golden State <SVGIcons name='Chevron' /></Link>
+        <Link to="/TaxExodus">The Great Tax Exodus <SVGIcons name='Chevron' /></Link>
+        <Link to="/LeavingCalifornia">Leaving the Golden State <SVGIcons name='Chevron' /></Link>
       </section>
       <Footer />
     </div>
