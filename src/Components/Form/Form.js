@@ -1,42 +1,46 @@
-import React, { useState } from 'react';
-import Loader from 'react-loader-spinner'
-import axios from 'axios';
+import React, { useState } from "react";
+import Loader from "react-loader-spinner";
+import axios from "axios";
 
-import FormBGImg from '../../Assets/Images/FormBGImg.jpg'
+import FormBGImg from "../../Assets/Images/FormBGImg.jpg";
 
-import './Form.scss';
+import "./Form.scss";
 
 const Form = () => {
   const [form, setForm] = useState({
-    first_name: '',
-    last_name: '',
-    email: '',
-    phone: '',
-    area_of_interest: '',
-    has_home: '',
-    when_to_move: '',
+    first_name: "",
+    last_name: "",
+    email: "",
+    phone: "",
+    area_of_interest: "",
+    has_home: "",
+    when_to_move: ""
   });
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [loader, setloader] = useState(false);
 
-  const handleChange = (e) => {
-    setForm({ ...form, [e.target.name]: e.target.value })
-  }
+  const handleChange = e => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
 
-  const handleForm = (e) => {
-
+  const handleForm = e => {
     e.preventDefault();
     if (loader) {
       return;
     }
-    const { first_name,
+    const {
+      first_name,
       last_name,
       email,
       phone,
       area_of_interest,
       has_home,
-      when_to_move } = form;
-    const message = `Phone: ${phone} \nArea of Interest: ${area_of_interest || 'No answer selected'} \nDo you have a home to sell?: ${has_home || 'No answer selected'} \nWhen would you like to move?: ${when_to_move || 'No answer selected'} `
+      when_to_move
+    } = form;
+    const message = `Phone: ${phone} \nArea of Interest: ${area_of_interest ||
+      "No answer selected"} \nDo you have a home to sell?: ${has_home ||
+      "No answer selected"} \nWhen would you like to move?: ${when_to_move ||
+      "No answer selected"} `;
     setloader(true);
     axios({
       method: "POST",
@@ -45,19 +49,19 @@ const Form = () => {
       data: {
         name: `${first_name} ${last_name}`,
         email: email,
-        message,
+        message
       }
-    }).then((response) => {
-      if (response.data.msg === 'success') {
+    }).then(response => {
+      if (response.data.msg === "success") {
         setloader(false);
         setFormSubmitted(true);
-        setForm({})
+        setForm({});
       } else {
         setloader(false);
-        alert("Message failed to send.")
+        alert("Message failed to send.");
       }
-    })
-  }
+    });
+  };
   return (
     <div className="form-wrap">
       <div className="form-img">
@@ -65,54 +69,180 @@ const Form = () => {
         <div className="layer"></div>
       </div>
       <div className="website-width form-content">
-        {formSubmitted && (<div className="form-holder">
-          <p>Form is successfully submitted</p>
-          <p>We will get back to you!</p>
-        </div>)}
-        <h2>Contact Us</h2>
-        <form action="https://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this);" target="_top">
-          <input name="skip_WhereToSend" type="hidden" value="noumanaamirkhan@email.com" />
+        {formSubmitted && (
+          <div className="form-holder">
+            <p>Form is successfully submitted</p>
+            <p>We will get back to you!</p>
+          </div>
+        )}
+        <h2>LETS SET A STRATEGY</h2>
+        <form
+          action="https://www.SnapHost.com/captcha/send.aspx"
+          id="ContactUsCaptchaWebForm"
+          method="post"
+          onsubmit="return ValidateForm(this);"
+          target="_top"
+        >
+          <input
+            name="skip_WhereToSend"
+            type="hidden"
+            value="raymond@enjoyarizonaliving.com"
+          />
           <input name="skip_SnapHostID" type="hidden" value="YT7GJMB75BWT" />
-          <input name="skip_WhereToReturn" type="hidden" value="http://arizonatestingsite.000webhostapp.com/" />
-          <input name="skip_Subject" type="hidden" value="Contact Us Form" />
+          <input
+            name="skip_WhereToReturn"
+            type="hidden"
+            value="http://www.new2arizona.com/Message"
+          />
+          <input name="skip_Subject" type="hidden" value="New2Arizona Contact Us Form" />
           <input name="skip_ShowUsersIp" type="hidden" value="1" />
           <input name="skip_SendCopyToUser" type="hidden" value="1" />
 
           <table border="0" cellpadding="5" cellspacing="0" width="600">
             <tr>
-              <td><b>Name*:</b></td>
-              <td><input name="Name" type="text" maxlength="60" style={{ width: '350px' }} /></td>
+              <td>
+                <input
+                  name="FirstName"
+                  type="text"
+                  maxlength="60"
+                  placeholder="First Name:"
+                  required
+                />
+              </td>
             </tr>
             <tr>
-              <td><b>Name2*:</b></td>
-              <td><input name="Name2" type="text" maxlength="60" style={{ width: '350px' }} /></td>
+              <td>
+                <input
+                  name="LastName"
+                  type="text"
+                  maxlength="60"
+                  placeholder="Last Name:"
+                />
+              </td>
             </tr>
             <tr>
-              <td><b>Phone number:</b></td>
-              <td><input name="PhoneNumber" type="text" maxlength="43" style={{ width: '350px' }} /></td>
-            </tr><tr>
-              <td><b>Email address*:</b></td>
-              <td><input name="FromEmailAddress" type="text" maxlength="60" style={{ width: '350px' }} /></td>
-            </tr><tr>
-              <td><b>Comments and questions*:</b></td>
-              <td><textarea name="Comments" rows="7" cols="40" style={{ width: '350px' }}></textarea></td>
-            </tr><tr>
-              <td colspan="2" align="center"> <br />
-                <table border="0" cellpadding="0" cellspacing="0">
-                  <tr><td colspan="2" style={{ paddingBottom: '18px' }}>
-                  </td></tr>
-                  <tr valign="top"><td> <i>Enter web form code*:</i>
-                    <input name="skip_CaptchaCode" type="text" style={{ width: '80px' }} maxlength="6" />
-                  </td><td>
-                      <a href="https://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx"><img id="CaptchaImage" alt="Contact Us form" title="HTML code for Contact Us form"
-                        style={{ marginLeft: '20px' }}
-                        src="https://www.SnapHost.com/captcha/CaptchaImage.aspx?id=YT7GJMB75BWT&ImgType=2" /></a><br />
-                      <a href="#" onclick="return ReloadCaptchaImage('CaptchaImage');"><span style={{ fontSize: '12px' }}>reload image</span></a> </td></tr>
-                </table> <br />
-                * - required fields. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-<input name="skip_Submit" type="submit" value="Submit" />
-              </td></tr>
-          </table><br />
+              <td>
+                <input
+                  name="EmailAddress"
+                  type="email"
+                  maxlength="60"
+                  placeholder="Email:"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  name="PhoneNumber"
+                  type="text"
+                  maxlength="43"
+                  placeholder="Phone Number:"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  name="InterestedAreaInAZ"
+                  type="text"
+                  placeholder="What area of Arizona are you interested?"
+                ></input>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <input
+                  name="HaveHomeToSell"
+                  type="text"
+                  placeholder="Do you have a home to sell?"
+                ></input>
+              </td>
+            </tr>
+            <tr>
+              <div className="radio-button-text">
+                When would you like to move?
+              </div>
+            </tr>{" "}
+            <tr className="radio-button">
+              <article>
+                {" "}
+                <input
+                  type="radio"
+                  id="3Months"
+                  name="moveTime"
+                  value="3 Months"
+                />{" "}
+                <label for="3Months">3 Months</label>
+              </article>
+              <article>
+                <input
+                  type="radio"
+                  id="6Months"
+                  name="moveTime"
+                  value="6 Months"
+                />
+                <label for="6Months">6 Months</label>
+              </article>
+              <article>
+                {" "}
+                <input
+                  type="radio"
+                  id="9Months"
+                  name="moveTime"
+                  value="9 Months"
+                />{" "}
+                <label for="9Months">9 Months</label>
+              </article>
+              <article>
+                <input type="radio" id="1Year" name="moveTime" value="1 Year" />
+                <label for="1Year">1 Year</label>
+              </article>
+            </tr>
+            <tr className='submit-wrapper'>
+              <td colspan="2" align="center">
+                {" "}
+                <br />
+                <div className='code' border="0" cellpadding="0" cellspacing="0">
+                
+                  <tr  className='text' valign="top">
+                    <td>
+                      {" "}
+                     Enter web form code*:
+                      <input
+                        name="skip_CaptchaCode"
+                        type="text"
+                        style={{ width: "80px" }}
+                        maxlength="6"
+                      />
+                    </td>
+                    <td>
+                      <a href="https://www.snaphost.com/captcha/ReadyForms/ContactUsForm.aspx">
+                        <img
+                          id="CaptchaImage"
+                          alt="New2Arizona Contact Us form"
+                          title="HTML code for Contact Us form"
+                          style={{ marginLeft: "20px" }}
+                          src="https://www.SnapHost.com/captcha/CaptchaImage.aspx?id=YT7GJMB75BWT&ImgType=2"
+                        />
+                      </a>
+                      <br />
+                    </td>
+                  </tr>
+                </div>{" "}
+             
+                <input
+                  className="submit-button"
+                  name="skip_Submit"
+                  type="submit"
+                  value="Submit"
+                 
+                />
+              </td>
+            </tr>
+          </table>
+          <br />
         </form>
         {/* {!formSubmitted &&
           // <form className="form" onSubmit={handleForm}>
@@ -160,6 +290,6 @@ const Form = () => {
       </div>
     </div>
   );
-}
+};
 
 export default Form;
