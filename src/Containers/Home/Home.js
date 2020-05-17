@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Link } from 'react-router-dom'
+import { HashLink as Link } from 'react-router-hash-link';
 
 import Header from "../../Components/Header";
 import Intro from "../../Components/Intro";
@@ -32,8 +32,8 @@ const Home = () => {
         </div>
         <Form />
         <section className="button-links website-width">
-          <Link to="/TaxExodus">The Great Tax Exodus <SVGIcons name='Chevron' /></Link>
-          <Link to="/LeavingCalifornia">Leaving the Golden State <SVGIcons name='Chevron' /></Link>
+          <Link to="/TaxExodus#content">The Great Tax Exodus <SVGIcons name='Chevron' /></Link>
+          <Link to="/LeavingCalifornia#content">Leaving the Golden State <SVGIcons name='Chevron' /></Link>
         </section>
         <Footer />
       </div>

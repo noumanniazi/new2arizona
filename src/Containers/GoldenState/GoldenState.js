@@ -16,7 +16,7 @@ const GoldenState = () => {
           <Header />
           <Intro />
         </div>
-        <div className="website-width leaving-cal-section">
+        <div id="content" className="website-width leaving-cal-section">
           <Video url="https://www.youtube.com/embed/eJcT3JbrDRw" />
           <div className="leaving-cal-text">
             <h2>{data.section4.heading}</h2>
