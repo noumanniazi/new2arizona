@@ -1,3 +1,5 @@
+@import "./Assets/scss/common.scss";
+
 .website-width {
   max-width: 80%;
   margin: auto;
@@ -16,6 +18,7 @@
   }
   .personal-info-link {
     text-decoration: none;
+    font-weight: bold;
     color: #9781a0;
   }
 }
@@ -25,8 +28,8 @@
   color: #fff;
   font-style: normal;
   font-weight: 500;
-  font-size: 22px;
-  line-height: 40px;
+  font-size: 18px;
+  line-height: 28px;
   align-items: center;
   display: flex;
   justify-content: center;
@@ -36,7 +39,12 @@
 
   p {
     text-align: center;
-    margin: 0;
+    max-width: calc(100% - 20px);
+  }
+
+  .reset-anchor-style {
+    text-decoration: none;
+    color: $white;
   }
 }
 
@@ -46,8 +54,7 @@
   margin-top: 5rem;
   margin-bottom: 6rem;
 
-  @media (max-width:480px) {
-
+  @media (max-width: 480px) {
     flex-direction: column;
   }
 
@@ -62,12 +69,12 @@
     display: flex;
     transition: all 200ms linear;
     text-decoration: none;
-    
-    @media (max-width:768px) {
+
+    @media (max-width: 768px) {
       padding: 1rem 2rem;
     }
 
-    @media (max-width:480px) {
+    @media (max-width: 480px) {
       font-size: 14px;
       align-items: center;
       justify-content: center;
@@ -79,7 +86,7 @@
       margin-left: 10px;
     }
 
-    &:hover{
+    &:hover {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     }
   }

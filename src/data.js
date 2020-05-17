@@ -1,5 +1,3 @@
-import React from "react";
-
 const data = {
   section1: {
     paragraphs: [
@@ -12,7 +10,8 @@ const data = {
       "World Renowned Medical Facilities",
       "Resorts, Entertainment, Dining",
       "Outdoor Scenery Like No Other: from the Unique Sonora Desert with Saguaro Cactus Forests to the Red Rocks of Sedona to the Largest Ponderosa Pine Forest in the world....from Hiking, Horseback Riding, Boating to Snow Skiing...its all here.",
-      "Phoenix is known for its outstanding hotel resorts, with elaborate pools and desert gardens, Southwest-infused fine dining, luxurious spas and championship golf courses."
+      "Phoenix is known for its outstanding hotel resorts, with elaborate pools and desert gardens, Southwest-infused fine dining, luxurious spas and championship golf courses.",
+      "Start Living instead of just surviving! A beautiful new life awaits you here in Arizona. Act now!"
     ]
   },
   section2: {

@@ -5,15 +5,13 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: $grid-gap;
-  font-size: 14px;
-  color: #777474;
+  font-size: 16px;
+  color: $black;
   h2{
-    color: #000;
     font-size: 24px;
   }
   .family-img {
     align-self: center;
-    // justify-self: center;
   
     @media (max-width:768px) {
       justify-self: center;

@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import Home from "./Containers/Home";
-import LeavingCalifornia from "./Containers/LeavingCalifornia";
+import TaxExodus from "./Containers/TaxExodus";
 import GoldenState from "./Containers/GoldenState";
 import SuccessMessage from "./Containers/SuccessMessage";
 
@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Switch>
         <Route exact path="/TaxExodus">
-          <LeavingCalifornia />
+          <TaxExodus />
         </Route>
         <Route exact path="/LeavingCalifornia">
           <GoldenState />
