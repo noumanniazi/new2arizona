@@ -25,10 +25,12 @@ const Home = () => {
         <Intro />
         <VisualAndText src={arizona} text={data.section1} hasImage bullets />
         <Section2 data={data} img={family} />
-        <div className="full-width-bg">
+        <div className="full-width-bg search-home-section">
+          <SVGIcons name="SearchHome" />
           <p>
-            <a className="reset-anchor-style" href="https://raymondkerege.exprealty.com/" target="_blank" rel="noopener noreferrer">Want to do a home search by yourself first before contacting me? That’s awesome! All you have to do is click this link and  start your search <u>https://raymondkerege.exprealty.com/</u></a>
+            Want to do a home search by yourself first before contacting me? That’s awesome!
           </p>
+          <p><a href="https://raymondkerege.exprealty.com/" target="_blank" rel="noopener noreferrer">CLICK HERE NOW TO SEARCH HOMES</a></p>
         </div>
         <Form />
         <section className="button-links website-width">
