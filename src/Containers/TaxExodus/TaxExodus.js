@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import ReactPixel from 'react-facebook-pixel';
 
 import Header from "../../Components/Header";
 import Intro from "../../Components/Intro";
@@ -8,6 +9,12 @@ import data from "../../data";
 import SEO from "../../Components/SEO";
 
 const TaxExodus = () => {
+
+  useEffect(() => {
+    ReactPixel.init('269259011104810');
+    ReactPixel.pageView();
+  }, []);
+
   return (
     <>
       <SEO title="Tax Exodus" />

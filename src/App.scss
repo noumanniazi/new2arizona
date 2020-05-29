@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 @import "./Assets/scss/common.scss";
 
 .website-width {
@@ -44,7 +44,7 @@
   }
 
   a {
-    font-family: 'Raleway', 'Roboto';
+    font-family: "Raleway", "Roboto";
     color: #9a1915;
     font-size: 36px;
     transition: all 0.2s linear;
@@ -95,5 +95,18 @@
     &:hover {
       box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     }
+  }
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+
+  &.hide {
+    opacity: 0;
   }
 }
