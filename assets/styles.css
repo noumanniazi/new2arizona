@@ -265,38 +265,23 @@ code {
   display: flex;
 }
 
-.wrap .legal-images .exp-img {
+.wrap .legal-images .home-smart-img {
   padding-right: 20px;
-  height: 22px;
-  width: 64px;
+  height: 26px;
 }
 
-.wrap .legal-images .equal-img {
-  height: 23px;
-  width: 23px;
-}
 
 @media (max-width: 768px) {
-  .wrap .legal-images .exp-img {
+  .wrap .legal-images .home-smart-img {
     padding-right: 10px;
-    height: 30px;
-    width: 79px;
-  }
-  .wrap .legal-images .equal-img {
-    height: 30px;
-    width: 31px;
+    height: 26px;
   }
 }
 
 @media (max-width: 480px) {
-  .wrap .legal-images .exp-img {
+  .wrap .legal-images .home-smart-img {
     padding-right: 10px;
-    height: 25px;
-    width: 66px;
-  }
-  .wrap .legal-images .equal-img {
-    height: 25px;
-    width: 26px;
+    height: 26px;
   }
 }
 
