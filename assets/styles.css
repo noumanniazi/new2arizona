@@ -124,6 +124,7 @@ table {
   justify-content: space-between;
   margin-top: 5rem;
   margin-bottom: 6rem;
+  gap: 10px;
 }
 
 @media (max-width: 480px) {
